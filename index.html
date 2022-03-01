@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <h1 class="header--title">Progats</h1>
-        <img class="header--logo" src="./img/logo.webp" alt="logo progats">
+        <img id="logo" class="header--logo" src="./img/logo.webp" alt="logo progats">
         <nav class="menu">
             <a class="menu--item" href="">Equipo</a>
             <a class="menu--item" href="">Servicios</a>
@@ -31,7 +31,7 @@
             <p class="members--role">Fundadora</p>
         </article>
         <article class="members--card card__veronica">
-            <h3 class="members--name">Verónica</h3>
+            <h3 id="veronica" class="members--name">Verónica</h3>
             <p class="members--role">Voluntaria</p>
         </article>
         <article class="members--card card__edurne">
@@ -41,7 +41,7 @@
     </section>
     <footer class="footer">
         <p class="footer--description">PROGAT es una asociación sín ánimo de lucro. Apóyanos con <strong>
-                <a class="footer--link" href="https://www.progatslagarriga.com">una
+                <a id="web" class="footer--link" href="https://www.progatslagarriga.com">una
                     donación</a>
             </strong>. ¡Muchas
             gracias!</p>
@@ -82,24 +82,38 @@
 
         // 2. Completa el código para cambiar el título h1 por "SuperProGats"
 
+        document.querySelector("h1").textContent = "SuperProGats";
+
         // document.querySelector("h1")
 
         // 3. Completa el código para mostrar por consola el contenido del segundo h3. Por la consola debe aparecer "Verónica"
 
         // console.log(document.querySelector(""));
 
+        let nombre = document.querySelector("#veronica").textContent;
+        console.log(nombre)
+
         // 4. Completa el código para mostrar por consola el valor del atributo "href" del enlace del footer. Debería aparecer "https://www.progatslagarriga.com"
+       
+        
+         let web = document.querySelector('#web').href;
+         console.log(web);
+    
+
 
         // 5. Completa el código para cambiar el logo del gato por el logo ubicado en img/logo-2.jfif
 
         // document.querySelector("");
+
+        document.querySelector("#logo").src = "./img/logo-2.jfif";
 
         // 6. Investiga como cambiar el color de fondo del body a través de la propiedad  backGroundColor. Investiga cómo cambiar el color de fondo al valor de la variable "nuevoColor".
 
         let nuevoColor = "aliceblue";
 
         // document.querySelector("")
-
+         
+        document.querySelector("body").style.backgroundColor = nuevoColor;
 
     </script>
 
